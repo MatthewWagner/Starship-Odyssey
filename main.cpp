@@ -4,10 +4,56 @@
 
 using namespace std;
 
+string toLowerCase( string input );
+
+
+class Player
+{
+public:
+
+    //Heals player for a value healAmt
+    void heal( double healAmt ){
+
+        if ( (this->health + healAmt) > max_health)
+        {
+
+            //Heal player and remove health pack
+            cout << "You are fully healed.";
+            this->health = this->max_health;
+
+        }
+        else if ( this->health == max_health)
+        {
+            cout << "You are already fully healed."
+        }
+
+    }
+
+    //Upgrade max health of player
+    void upgradeHealth ( double upgrdHlth ) {
+
+        this->max_health += upgrdHlth;
+
+    }
+
+private:
+    double health = 100.0;
+    double max_health = 100.0;
+    double attack = 1.0;
+    double defense = 1.0;
+    double knowledge = 0.0;
+    string char_name = "Link";
+    string char_status = "";
+};
+
 int main()
 {
+    Player PlayerOne = new Player();
+
+    PlayerOne.setHealth(200);
     //Variable Initializations
     double health = 100.0;
+
     double attack = 1.0;
     double defense = 1.0;
     double knowledge = 0.0;
