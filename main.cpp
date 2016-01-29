@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    //initializations
+    //Variable Initializations
     double health = 100.0;
     double attack = 1.0;
     double defense = 1.0;
